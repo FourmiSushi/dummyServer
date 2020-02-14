@@ -16,9 +16,10 @@ func main() {
 
 func handlerFunc(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("----")
-	
+
 	log.Printf("%s received from: %s\n", r.Method, r.RemoteAddr)
 	log.Printf("Content-Type: %s", r.Header.Get("content-type"))
+	log.Printf("URI: %s", r.RequestURI)
 
 	switch r.Method {
 	case http.MethodPost, http.MethodPut, http.MethodPatch:
