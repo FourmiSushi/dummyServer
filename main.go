@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	log.Println("usage: request to http://localhost:8080")
+	log.Println("usage: request to http://localhost:6654")
 
 	http.HandleFunc("/", handlerFunc)
 	log.Fatal(http.ListenAndServe(":8080", nil))

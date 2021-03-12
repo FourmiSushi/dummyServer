@@ -1,0 +1,6 @@
+version: '3'
+services:
+  dummyserver:
+    build: .
+    ports:
+      - '6654:8080'
